@@ -4,3 +4,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background:#12101F
+}
+
+.ion-page {
+    --ion-background-color:#12101F;
+    --background: #12101F;
+  }

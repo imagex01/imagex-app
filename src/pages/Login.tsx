@@ -59,6 +59,10 @@ const Login: React.FC<MenuProps> = ({history, match}) => {
             <div className="text-white text-center flex items-center justify-center">
                 <span className="mr-2">No account? </span>
                 <span onClick={()=>{
+                    // const router = useIonRouter();
+                    // const goToPage = () => {
+                    //   router.push('/my-page', 'root', 'replace');
+                    // };
                     history.push('/register')
                 }} className="cursor-pointer text-fuchsia-700 underline">Register</span>
             </div>

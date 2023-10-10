@@ -1,19 +1,10 @@
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonIcon,
-  IonLabel,
   IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -34,6 +25,7 @@ import Splash from './pages/Splash';
 import MainTabs from './pages/MainTabs';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import PhotoSell from './pages/photo/PhotoSell';
 
 setupIonicReact();
 
@@ -47,6 +39,7 @@ const App: React.FC = () => (
           <Route path="/register" exact component={Register} />
           <Route path="/tabs" render={() => <MainTabs />} />
           <Route path="/splash"  component={Splash} />
+          <Route path="/photoSell"  component={PhotoSell} />
           <Redirect exact from="/" to="/splash" />
         </IonRouterOutlet>
      
