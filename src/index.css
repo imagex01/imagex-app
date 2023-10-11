@@ -8,6 +8,12 @@ body {
   background: #12101f;
 }
 
+.pic-header ion-toolbar {
+    --background: transparent no-repeat fixed center;
+    position: absolute;
+    top: 0;
+  }
+
 .ion-page {
   --ion-background-color: #12101f;
   --background: #12101f;

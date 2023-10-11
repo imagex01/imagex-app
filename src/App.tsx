@@ -29,6 +29,10 @@ import PhotoSell from './pages/photo/PhotoSell';
 import PhotoBuy from './pages/photo/PhotoBuy';
 import PhotoReport from './pages/photo/PhotoReport';
 import UserPage from './pages/user/UserPage';
+import MintCamera from './pages/photo/MintCamera';
+import PhotoResult from './pages/photo/PhotoResult';
+import PhotoReward from './pages/photo/PhotoReward';
+import RegisterVerify from './pages/RegisterVerify';
 
 setupIonicReact();
 
@@ -36,17 +40,21 @@ const App: React.FC = () => (
   <IonApp>
 
     <IonReactRouter>
-        <IonRouterOutlet>
+        <IonRouterOutlet id="main">
 
-          <Route path="/login" exact component={Login} />
-          <Route path="/register" exact component={Register} />
-          <Route path="/tabs" render={() => <MainTabs />} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/registerVerify" component={RegisterVerify} />
           <Route path="/splash"  component={Splash} />
           <Route path="/photoSell"  component={PhotoSell} />
           <Route path="/photoBuy"  component={PhotoBuy} />
           <Route path="/photoReport"  component={PhotoReport} />
           <Route path="/userPage"  component={UserPage} />
+          <Route path="/mintCamera"  component={MintCamera} />
+          <Route path="/photoResult"  component={PhotoResult} />
+          <Route path="/photoReward"  component={PhotoReward} />
           <Redirect exact from="/" to="/splash" />
+          <Route path="/tabs" render={() => <MainTabs />} />
         </IonRouterOutlet>
      
     </IonReactRouter>

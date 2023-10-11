@@ -113,14 +113,17 @@ const UserPage: React.FC = () => {
     ]);
 
     return <IonPage>
-         <IonHeader className="ion-no-border">
+         <IonHeader className="ion-no-border pic-header">
             <IonToolbar>
                 <IonButtons slot="start">
-                    <IonBackButton style={{color:'#fff'}}  />
+                    <IonBackButton style={{color:'#fff',background:'rgba(0,0,0,0.4)',borderRadius:99,margin:10}}  />
                 </IonButtons>
                 <IonTitle color="light">
-                    <div className='font-bold text-center'>Atlos</div>
+                    
                 </IonTitle>
+                <IonButtons slot="end">
+                    <div className='w-10'></div>
+                </IonButtons>
                 
             </IonToolbar>
 

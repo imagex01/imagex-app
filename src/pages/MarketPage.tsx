@@ -159,7 +159,7 @@ const MarketPage: React.FC = () => {
                       <div className=' font-bold text-white'>{item.like}</div>
                   </div>
                 </div>
-                <div className='mt-2 font-bold text-white'>{item.name}{index}</div>
+                <div className='mt-2 text-sm font-bold text-white'>{item.name}{index}</div>
               </div>
             })
           }
