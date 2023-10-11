@@ -4,7 +4,7 @@ import {
   IonRouterOutlet,
   setupIonicReact
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { IonReactRouter,IonReactHashRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,7 +39,7 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
 
-    <IonReactRouter>
+    <IonReactHashRouter>
         <IonRouterOutlet id="main">
 
           <Route path="/login" component={Login} />
@@ -57,7 +57,7 @@ const App: React.FC = () => (
           <Route path="/tabs" render={() => <MainTabs />} />
         </IonRouterOutlet>
      
-    </IonReactRouter>
+    </IonReactHashRouter>
   </IonApp>
 );
 

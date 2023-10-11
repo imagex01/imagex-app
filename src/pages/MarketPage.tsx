@@ -8,6 +8,7 @@ import Icon3 from '../img/Image_pic_bg.png'
 import LikedIcon from '../img/icon_like_pre.png'
 import LikeIcon from '../img/icon_like.png'
 import { useIonRouter } from '@ionic/react';
+import CoinIcon from '../img/icon_coin_big.png'
 
 const filterOne = [
   { key: 'Wade Cooper', value: 'Scene' },
@@ -30,97 +31,113 @@ const MarketPage: React.FC = () => {
       name: 'Water',
       url: Icon1,
       like: '36',
-      isLike: 0
+      isLike: 0,
+      price: 300
     },
     {
       name: 'Beauty',
       url: Icon2,
       like: '1.5k',
-      isLike: 1
+      isLike: 1,
+      price: 28
     },
     {
       name: 'Water',
       url: Icon3,
       like: '87',
-      isLike: 1
+      isLike: 1,
+      price: 88
     },
     {
       name: 'Beauty',
       url: Icon1,
       like: '3.5k',
-      isLike: 1
+      isLike: 1,
+      price: 78
     },
     {
       name: 'Water',
       url: Icon2,
       like: '219',
-      isLike: 1
+      isLike: 1,
+      price: 56
     },
     {
       name: 'Beauty',
       url: Icon3,
       like: '1.5k',
-      isLike: 0
+      isLike: 0,
+      price: 120
     },
     {
       name: 'Water',
       url: Icon1,
       like: '219',
-      isLike: 1
+      isLike: 1,
+      price: 45
     },
     {
       name: 'Beauty',
       url: Icon2,
       like: '1.5k',
-      isLike: 0
+      isLike: 0,
+      price: 35
     },
     {
       name: 'Water',
       url: Icon1,
       like: '219',
-      isLike: 1
+      isLike: 1,
+      price: 62
     },
     {
       name: 'Beauty',
       url: Icon2,
       like: '1.5k',
-      isLike: 0
+      isLike: 0,
+      price: 32
     },
     {
       name: 'Water',
       url: Icon3,
       like: '219',
-      isLike: 1
+      isLike: 1,
+      price: 32
     },
     {
       name: 'Beauty',
       url: Icon1,
       like: '1.5k',
-      isLike: 0
+      isLike: 0,
+      price: 32
     },
     {
       name: 'Water',
       url: Icon2,
       like: '219',
-      isLike: 1
+      isLike: 1,
+      price: 32
     },
     {
       name: 'Beauty',
       url: Icon3,
       like: '1.5k',
-      isLike: 0
+      isLike: 0,
+      price: 32
     },
     {
       name: 'Water',
       url: Icon1,
       like: '219',
-      isLike: 1
+      isLike: 1,
+      price: 32
     },
     {
       name: 'Beauty',
       url: Icon2,
       like: '1.5k',
-      isLike: 0
+      isLike: 0,
+      price: 32
     },
   ]);
 
@@ -134,7 +151,7 @@ const MarketPage: React.FC = () => {
             <div className='font-bold text-center'>Market</div>
           </IonTitle>
         </IonToolbar>
-        <div className=' flex items-center w-full px-4 pb-2' style={{ background: '#12101F'}}>
+        <div className=' flex items-center w-full px-4 pb-2' style={{ background: '#12101F' }}>
           <div className='mr-4 flex-1'>
             <FilterSelect list={filterOne} />
           </div>
@@ -145,21 +162,25 @@ const MarketPage: React.FC = () => {
         </div>
       </IonHeader>
       <IonContent fullscreen>
-        
+
         <div className="font-normal grid px-4 my-4 grid-cols-2 md:grid-cols-4 gap-4 w-full">
           {
             list.map((item: any, index: number) => {
-              return <div onClick={()=>{
+              return <div onClick={() => {
                 router.push('/photoBuy');
               }} key={index} className=" cursor-pointer">
                 <div className='relative'>
                   <img className='relative rounded-md' src={item.url} />
-                  <div className='absolute bottom-2 right-2 py-0.5 px-2 flex items-center rounded-md' style={{ background: 'rgba(0,0,0,0.5)' }}>
-                      <img className='w-4 h-4 mr-1' src={item.isLike==1?LikedIcon:LikeIcon} />
-                      <div className=' font-bold text-white'>{item.like}</div>
+                  <div className='absolute top-2 right-2 py-0.5 px-2 flex items-center rounded-md' style={{ background: 'rgba(0,0,0,0.5)' }}>
+                    <img className='w-4 h-4 mr-1' src={item.isLike == 1 ? LikedIcon : LikeIcon} />
+                    <div className=' font-bold text-white'>{item.like}</div>
                   </div>
                 </div>
                 <div className='mt-2 text-sm font-bold text-white'>{item.name}{index}</div>
+                <div className=' text-sm flex items-center mt-1'>
+                  <img className='w-4 h-4 mr-2' src={CoinIcon} />
+                  <div className=' font-bold text-amber-500' style={{ color: '#FFC600' }}>{item.price + index*3} XIM</div>
+                </div>
               </div>
             })
           }

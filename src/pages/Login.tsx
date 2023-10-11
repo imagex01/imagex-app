@@ -11,10 +11,10 @@ export default function Login() {
 
     return <IonPage>
         <IonContent fullscreen>
-            <div className="relative w-screen h-screen" >
+            <div className="relative w-screen  h-screen" >
                 <img src={Bg0} className=" absolute object-cover w-screen h-screen" />
                 <div className=" absolute z-40 bg-opacity-40 bg-black w-screen h-screen" />
-                <div className='p-6 z-50 absolute bottom-0  top-0 left-0 right-0 flex flex-col items-center justify-center'>
+                <div className='p-6 z-50 absolute bottom-0  top-0 -mt-20 left-0 right-0 flex flex-col items-center justify-center'>
                     <img src={Icon0} className=" w-20 h-20" />
                     <div className='mt-4 text-white text-lg font-bold'>
                         Life is share
@@ -45,7 +45,7 @@ export default function Login() {
                     </label>
 
                     <div onClick={() => {
-                        router.push("/tabs/home")
+                        router.push("/tabs")
                     }} className=" cursor-pointer mx-auto mt-6 flex w-full rounded-full  max-w-xl h-14 items-center justify-center">
                         <div className="h-14 w-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-0.5">
                             <div className="flex text-white font-semibold text-center rounded-full h-full w-full items-center justify-center bg-gray-800 back opacity-90" style={{ background: 'rgba(0,0,0,0.8)' }}>

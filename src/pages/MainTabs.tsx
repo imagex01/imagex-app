@@ -16,21 +16,20 @@ interface MainTabsProps { }
 const MainTabs: React.FC<MainTabsProps> = () => {
 
 
-    const [tab, setTab] = useState<string>("home");
+    const [tab, setTab] = useState<string>("wallet");
 
 
     return (
         <IonTabs>
             <IonRouterOutlet>
                
-                <Redirect exact  path="/tabs" to="/tabs/home" />
+                <Redirect exact  path="/tabs" to="/tabs/wallet" />
                 <Route exact path="/tabs/home" component={MarketPage} />
                 <Route exact  path="/tabs/wallet"  component={AssetPage} />
                 <Route path="/tabs/profile" component={ProfilePage} />
                 <Route exact path="/tabs">
-                    <Redirect to="/tabs/home" />
+                    <Redirect to="/tabs/wallet" />
                 </Route>
-                
                 
             </IonRouterOutlet>
             <IonTabBar style={{background:'#2A2F47', border: '1px solid rgba(255,255,255,0.3)'}}   onIonTabsDidChange={(e)=>{

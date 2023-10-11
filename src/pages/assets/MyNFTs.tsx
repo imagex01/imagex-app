@@ -119,7 +119,7 @@ export default function MyNFTs() {
           }}>
             <div className='relative'>
               <img className='relative rounded-md' src={item.url} />
-              <div className='absolute bottom-2 right-2 py-0.5 px-2 flex items-center rounded-md' style={{ background: 'rgba(0,0,0,0.5)' }}>
+              <div className='absolute top-2 right-2 py-0.5 px-2 flex items-center rounded-md' style={{ background: 'rgba(0,0,0,0.5)' }}>
                 <img className='w-4 h-4 mr-1' src={item.isLike == 1 ? LikedIcon : LikeIcon} />
                 <div className=' font-bold text-white'>{item.like}</div>
               </div>
