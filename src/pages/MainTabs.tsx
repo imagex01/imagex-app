@@ -10,20 +10,14 @@ import MePreIcon from '../img/icon_me_pre.png'
 import AssetPreIcon from '../img/icon_assest_pre.png'
 import AssetIcon from '../img/icon_assest.png'
 import ProfilePage from './ProfilePage';
-import { useGlobal,useUpdateGlobal } from '../contexts/GlobalProvider';
 
 interface MainTabsProps { }
 
 const MainTabs: React.FC<MainTabsProps> = () => {
 
-    const { showTabs } = useGlobal();
-    const updateGlobal = useUpdateGlobal();
-    const [tab, setTab] = useState<string>("home");
-    let tabStyle = showTabs ? undefined : { display: "none" };
 
-    useEffect(()=>{
-        updateGlobal({ showTabs: true });
-    },[])
+    const [tab, setTab] = useState<string>("home");
+
 
     return (
         <IonTabs>

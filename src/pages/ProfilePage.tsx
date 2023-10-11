@@ -8,12 +8,10 @@ import MeSettingIcon from '../img/Me_icon_Setting.png'
 import MePasswordIcon from '../img/Me_icon_Password.png'
 import { IonContent, IonPage } from '@ionic/react'
 import { useIonRouter } from '@ionic/react';
-import { useUpdateGlobal } from '../contexts/GlobalProvider';
 
 const ProfilePage: React.FC = () => {
 
     const router = useIonRouter();
-    const updateGlobal = useUpdateGlobal();
 
     return <IonPage>
         <IonContent fullscreen>
@@ -67,7 +65,7 @@ const ProfilePage: React.FC = () => {
                     <div className='w-full flex mt-4'>
                     <div className="h-16 w-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-0.5">
                         <div onClick={() => {
-                            updateGlobal({ showTabs: false });
+                            
                             router.push("/login",'root', 'replace')
                         }} className="cursor-pointer flex text-white font-semibold text-center rounded-full h-full w-full items-center justify-center bg-gray-800 back opacity-90" style={{ background: 'rgba(0,0,0,0.8)' }}>
                             Log out
