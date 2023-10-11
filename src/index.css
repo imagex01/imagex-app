@@ -1,15 +1,27 @@
-
-@import './theme/variables.css';
+@import "./theme/variables.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    background:#12101F
+  background: #12101f;
 }
 
 .ion-page {
-    --ion-background-color:#12101F;
-    --background: #12101F;
-  }
+  --ion-background-color: #12101f;
+  --background: #12101f;
+}
+
+.title-border {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-border::before,
+.title-border::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #333;
+  margin: auto;
+}

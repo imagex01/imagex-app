@@ -26,6 +26,9 @@ import MainTabs from './pages/MainTabs';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import PhotoSell from './pages/photo/PhotoSell';
+import PhotoBuy from './pages/photo/PhotoBuy';
+import PhotoReport from './pages/photo/PhotoReport';
+import UserPage from './pages/user/UserPage';
 
 setupIonicReact();
 
@@ -40,6 +43,9 @@ const App: React.FC = () => (
           <Route path="/tabs" render={() => <MainTabs />} />
           <Route path="/splash"  component={Splash} />
           <Route path="/photoSell"  component={PhotoSell} />
+          <Route path="/photoBuy"  component={PhotoBuy} />
+          <Route path="/photoReport"  component={PhotoReport} />
+          <Route path="/userPage"  component={UserPage} />
           <Redirect exact from="/" to="/splash" />
         </IonRouterOutlet>
      

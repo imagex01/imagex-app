@@ -36,7 +36,7 @@ export default function MyCamera() {
                 return <div key={index}>
 
                     <img className='relative rounded-md' src={item.url} />
-                    <div className='mt-2 text-white'>{item.name}{index}</div>
+                    <div className='mt-2 text-white font-semibold'>{item.name}{index}</div>
                 </div>
             })
         }

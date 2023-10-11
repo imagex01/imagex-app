@@ -40,20 +40,20 @@ const AssetPage: React.FC = () => {
         <div className='text-sm flex border-b border-gray-600 border-solid items-center w-full px-4 pt-2' style={{ background: '#12101F' }}>
           <div onClick={() => {
             setTabPos(0)
-          }} className={`${tabPos==0?"border-indigo-600":"border-none"}  mr-4 cursor-pointer border-b-2  pb-2 flex-1 flex items-center justify-center text-white`}>
+          }} className={`${tabPos==0?"border-indigo-600":"border-none"} font-bold  mr-4 cursor-pointer border-b-2  pb-2 flex-1 flex items-center justify-center text-white`}>
             <img className='w-4 mr-2' src={tabPos == 0 ? MyNftPreIcon : MyNftIcon} />
-            <div className={tabPos == 0 ? "text-white" : "text-gray-4400"}>My NFTs</div>
+            <div className={tabPos == 0 ? "text-white" : "text-gray-400"}>My NFTs</div>
           </div>
 
           <div onClick={() => {
             setTabPos(1)
-          }} className={`${tabPos==1?"border-indigo-600":"border-none"} mr-4 cursor-pointer border-b-2  pb-2 flex-1 flex items-center justify-center text-white`}>
+          }} className={`${tabPos==1?"border-indigo-600":"border-none"} font-bold mr-4 cursor-pointer border-b-2  pb-2 flex-1 flex items-center justify-center text-white`}>
             <img className='w-4 h-4 mr-2' src={tabPos == 1 ? MyCameraPreIcon : MyCameraIcon} />
             <div className={tabPos == 1 ? "text-white" : "text-gray-400"}>My Camera</div>
           </div>
           <div onClick={() => {
             setTabPos(2)
-          }} className={`${tabPos==2?"border-indigo-600":"border-none"} flex-1 cursor-pointer border-b-2  pb-2  flex items-center justify-center text-white`}>
+          }} className={`${tabPos==2?"border-indigo-600":"border-none"} font-bold flex-1 cursor-pointer border-b-2  pb-2  flex items-center justify-center text-white`}>
             <img className='w-4 mr-2' src={tabPos == 2 ? MyBalancePreIcon : MyBalanceIcon} />
             <div className={tabPos == 2 ? "text-white" : "text-gray-400"}>My Balance</div>
           </div>

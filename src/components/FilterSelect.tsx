@@ -31,7 +31,7 @@ export default function FilterSelect({ list }: Props) {
     <div className="relative mt-1 border-white">
       <Listbox.Button className="relative w-full cursor-pointer rounded-full bg-transparent border-gray-600 border border-solid py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
 
-        <span className="block text-white pl-2 truncate">{value}</span>
+        <span className="block text-white pl-2 truncate font-bold">{value}</span>
         <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
           <ChevronUpDownIcon
             className="h-5 w-5 text-gray-400"

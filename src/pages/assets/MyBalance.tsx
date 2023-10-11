@@ -23,7 +23,7 @@ export default function MyBalance() {
             list.map((item: any, index: number) => {
                 return <div key={index} className="flex items-center w-full border-2 bg-gray-900 border-gray-500 py-3 px-4 rounded-md mb-4" 
                 style={{background: '#2E2B3B',border: '2px solid rgba(255,255,255,0.2)'}}>
-                    <div>{item.tokenName}</div>
+                    <div className="font-bold">{item.tokenName}</div>
                     <div className="ml-4 flex-1 flex flex-col justify-center text-center items-center">
                         <div className="flex items-center">
                             <img className="w-4 mr-2" src={MyBalancePreIcon} />

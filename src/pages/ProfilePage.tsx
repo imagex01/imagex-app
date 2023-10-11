@@ -23,41 +23,52 @@ const ProfilePage: React.FC = () => {
                 </div>
 
                 <div className='mx-4'>
-                    <div className="flex mt-4 items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
+                    <div className="flex mt-4 cursor-pointer items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
                         style={{ background: '#2E2B3B', border: '2px solid rgba(255,255,255,0.2)' }}>
                         <img className="w-4 mr-4" src={MeLikedIcon} />
                         <div className='flex-1'>Liked</div>
                         <img className="w-2" src={Arrow2Icon} />
 
                     </div>
-                    <div className="flex mt-4 items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
+                    <div className="flex mt-4 cursor-pointer items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
                         style={{ background: '#2E2B3B', border: '2px solid rgba(255,255,255,0.2)' }}>
                         <img className="w-4 mr-4" src={MePasswordIcon} />
                         <div className='flex-1'>Update Password</div>
                         <img className="w-2" src={Arrow2Icon} />
 
                     </div>
-                    <div className="flex mt-4 items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
+                    <div className="flex mt-4 cursor-pointer items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
                         style={{ background: '#2E2B3B', border: '2px solid rgba(255,255,255,0.2)' }}>
                         <img className="w-4 mr-4" src={MeSettingIcon} />
                         <div className='flex-1'>Setting</div>
                         <img className="w-2" src={Arrow2Icon} />
 
                     </div>
-                    <div className="flex mt-4 items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
+                    <div className="flex mt-4 cursor-pointer items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
                         style={{ background: '#2E2B3B', border: '2px solid rgba(255,255,255,0.2)' }}>
                         <img className="w-4 mr-4" src={MeAboutIcon} />
                         <div className='flex-1'>About</div>
                         <img className="w-2" src={Arrow2Icon} />
 
                     </div>
-                    <div className="flex mt-4 items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
+                    <div className="flex mt-4 cursor-pointer items-center w-full border-2 bg-gray-900 border-gray-500 py-5 px-4 rounded-md"
                         style={{ background: '#2E2B3B', border: '2px solid rgba(255,255,255,0.2)' }}>
                         <img className="w-4 mr-4" src={MePoliceIcon} />
                         <div className='flex-1'>Police</div>
                         <img className="w-2" src={Arrow2Icon} />
 
                     </div>
+
+                    <div className='w-full flex mt-4'>
+                    <div className="h-16 w-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-0.5">
+                        <div onClick={() => {
+
+                        }} className="cursor-pointer flex text-white font-semibold text-center rounded-full h-full w-full items-center justify-center bg-gray-800 back opacity-90" style={{ background: 'rgba(0,0,0,0.8)' }}>
+                            Log out
+                        </div>
+                    </div>
+
+                </div>
                 </div>
 
 

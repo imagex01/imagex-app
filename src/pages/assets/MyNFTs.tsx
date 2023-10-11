@@ -122,7 +122,7 @@ export default function MyNFTs(){
                 <div className=' font-bold text-white'>{item.like}</div>
             </div>
           </div>
-          <div className='mt-2 text-white'>{item.name}{index}</div>
+          <div className='mt-2 text-white font-semibold'>{item.name}{index}</div>
         </div>
       })
     }
