@@ -1,13 +1,16 @@
 
-import { useEffect, useRef } from "react";
+import {useEffect, useRef, useState} from "react";
 import Bg0 from '../img/bg_0.png'
 import Icon0 from '../img/icon_0.png'
 import { useIonRouter } from '@ionic/react';
 import { IonContent, IonPage } from '@ionic/react'
+import {AccountCreateModal} from "../components/Account/modal";
 
 export default function Login() {
 
     const router = useIonRouter();
+
+    const [showAccountCreate, setShowAccountCreate] = useState(false);
 
     return <IonPage>
         <IonContent fullscreen>
@@ -55,6 +58,12 @@ export default function Login() {
                     </div>
 
 
+                    <div className="text-white mt-10">
+                        <span className="mr-2">Web3.0 Identity?</span>
+                        <span className="cursor-pointer text-fuchsia-700 underline" onClick={()=>setShowAccountCreate(true)}>Click here.</span>
+                    </div>
+
+
                 </div>
 
                 <div className="z-50 absolute bottom-16 w-full">
@@ -68,6 +77,13 @@ export default function Login() {
 
 
             </div>
+
+            <AccountCreateModal isOpen={showAccountCreate} onOk={()=>{
+                setShowAccountCreate(false)
+                router.push("/tabs")
+            }} onClose={()=>{
+                setShowAccountCreate(false)
+            }}/>
         </IonContent>
     </IonPage>
 
