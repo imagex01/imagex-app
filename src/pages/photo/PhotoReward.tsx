@@ -11,6 +11,9 @@ import { useIonRouter } from '@ionic/react';
 export default function PhotoReward() {
 
     const router = useIonRouter();
+    const paramsString = router.routeInfo.search.substring(1)
+    const searchParams = new URLSearchParams(paramsString)
+    const webPath = searchParams.get('webPath');
 
 
     return <IonPage >
@@ -28,12 +31,12 @@ export default function PhotoReward() {
 
         </IonHeader>
         <IonContent fullscreen>
-            <div className='px-4 flex flex-col items-center justify-center max-w-xl mx-auto'>
-                <div className=' relative'>
+            <div className='px-4 flex flex-col items-center justify-center  max-w-lg mx-auto'>
+                <div className='w-full relative'>
                     <div className="flex text-white font-semibold flex-col flex-1 mt-4  w-full border-2 bg-gray-900 border-gray-500 py-3 px-3 rounded-md"
                         style={{ background: '#2E2B3B', border: '2px solid rgba(255,255,255,0.2)' }}>
 
-                        <img className='h-96 rounded-md w-full object-cover' style={{ height: '65vh' }} src={NFTDetail} />
+                        <img className='h-96 rounded-md w-full object-cover' style={{ height: '65vh' }} src={webPath?webPath:NFTDetail} />
                         <div className='mt-2'>The name of photo</div>
                         <div className='flex items-center' style={{ color: '#FFC600' }}>
                             <img className='w-4 h-4 mr-1' src={CoinIcon} />

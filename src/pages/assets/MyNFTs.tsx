@@ -6,11 +6,11 @@ import LikedIcon from '../../img/icon_like_pre.png'
 import LikeIcon from '../../img/icon_like.png'
 import CameraIcon from '../../img/icon_camera.png'
 import { useIonRouter } from '@ionic/react';
+import { Camera, CameraResultType } from '@capacitor/camera';
 
 export default function MyNFTs() {
 
   const router = useIonRouter();
-
   const [list, setList] = useState<any>([
     {
       name: 'Water',
@@ -110,6 +110,19 @@ export default function MyNFTs() {
     },
   ]);
 
+  const [photoUrl,setPhotoUrl] = useState<string>()
+
+  const cameraPhoto = async () => {
+    const image: any = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: true,
+      resultType: CameraResultType.Uri
+    });
+    console.log("image=",image);
+    
+    router.push('/photoResult?webPath=' + image.webPath);
+  }
+
   return <div className='relative'>
     <div className="font-normal grid px-4 my-4 grid-cols-2 md:grid-cols-4 gap-4 w-full">
       {
@@ -130,12 +143,12 @@ export default function MyNFTs() {
       }
     </div>
     <div className=' fixed bottom-16 left-4'>
-            
-            <img className=' cursor-pointer w-20 h-20' onClick={() => {
-                    router.push('/photoResult');
-                }} src={CameraIcon}  />
+      {/* <img  src={photoUrl} /> */}
+      <img className=' cursor-pointer w-20 h-20' onClick={() => {
+          cameraPhoto()
+      }} src={CameraIcon} />
 
-        </div>
+    </div>
   </div>
 
 

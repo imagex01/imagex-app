@@ -10,7 +10,8 @@ function useGlobalContext() {
 }
 
 const global_init = {
-    showTabs: false
+    showTabs: false,
+    webPath:"",
 };
 
 function reducer(state,{type,payload}) {
