@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export default function PhotoResult() {
 
-    const [points, setPoints] = useState<number>()
+    const [points, setPoints] = useState<string>("")
     const router = useIonRouter();
     const paramsString = router.routeInfo.search.substring(1)
     const searchParams = new URLSearchParams(paramsString)
@@ -38,10 +38,12 @@ export default function PhotoResult() {
         }).then(function (response: any) {
             console.info(response);
             if(response.data && response.data.code == 1){
-                setPoints(response.data.Avg)
+                setPoints(Number(response.data.data.Avg).toFixed(2))
             }
         }).catch(function (error: any) {
             console.info(error);
+            // let point = 60.094495948549
+            // setPoints(point.toFixed(2))
            
         })
     }

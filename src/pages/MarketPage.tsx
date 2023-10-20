@@ -145,8 +145,8 @@ const MarketPage: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader className="ion-no-border">
-        <IonToolbar>
+      <IonHeader className="ion-no-border"  style={{ background: '#12101F' }}>
+        <IonToolbar style={{ background: '#12101F' }}>
           <IonTitle color="light">
             <div className='font-bold text-center'>Market</div>
           </IonTitle>

@@ -34,7 +34,7 @@ import PhotoResult from './pages/photo/PhotoResult';
 import PhotoReward from './pages/photo/PhotoReward';
 import RegisterVerify from './pages/RegisterVerify';
 
-setupIonicReact();
+setupIonicReact({mode: "ios"});
 
 const App: React.FC = () => (
   <IonApp>
