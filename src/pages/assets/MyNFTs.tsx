@@ -6,7 +6,8 @@ import LikedIcon from '../../img/icon_like_pre.png'
 import LikeIcon from '../../img/icon_like.png'
 import CameraIcon from '../../img/icon_camera.png'
 import { useIonRouter } from '@ionic/react';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { isMobile } from "react-device-detect";
 
 export default function MyNFTs() {
 
@@ -113,10 +114,15 @@ export default function MyNFTs() {
   const [photoUrl,setPhotoUrl] = useState<string>()
 
   const cameraPhoto = async () => {
+    let source = CameraSource.Photos
+    if(isMobile){
+      source = CameraSource.Prompt
+    } 
     const image: any = await Camera.getPhoto({
-      quality: 90,
-      allowEditing: true,
-      resultType: CameraResultType.Uri
+      quality: 100,
+      resultType: CameraResultType.Uri,
+      source: source,
+      saveToGallery: true
     });
     console.log("image=",image);
     
