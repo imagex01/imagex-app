@@ -116,7 +116,7 @@ export default function MyNFTs() {
   const cameraPhoto = async () => {
     let source = CameraSource.Photos
     if(isMobile){
-      source = CameraSource.Prompt
+      source = CameraSource.Photos
     } 
     const image: any = await Camera.getPhoto({
       quality: 100,
